@@ -4,6 +4,8 @@ Some fractals in Python :
 
 - Sierpinsky triangle
 
+- Sierpinsky carpet
+
 - Soon
 
 
