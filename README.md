@@ -2,6 +2,8 @@
 
 Some fractals in Python :
 
+- Sierpinsky triangle
+
 - Soon
 
 
