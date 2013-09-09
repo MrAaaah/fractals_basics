@@ -1,6 +1,6 @@
 # Fractals basics
 
-Some fractals in Python :
+Some fractals in Python, no fancy coloring, no optimisations (multi-threading, etc.), just basic algorithms :
 
 - Sierpinsky triangle
 
