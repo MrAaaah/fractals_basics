@@ -6,7 +6,9 @@ Some fractals in Python :
 
 - Sierpinsky carpet
 
-- Soon
+- Mandelbrot
+
+- 
 
 
 # Requirements
