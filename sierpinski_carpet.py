@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-import Image
-import ImageDraw
+# noinspection PyPackageRequirements
+from PIL import Image, ImageDraw
 import math
 from datetime import datetime
 
@@ -24,11 +24,11 @@ def generate_carpet(x, y, size, n):
         for i in xrange(0, 3):
             for j in xrange(0, 3):
                 if i != 1 or j != 1:
-                    x0 = x+subsquare_size*i
-                    y0 = y+subsquare_size*j
-                    generate_carpet(x0, y0, subsquare_size, n-1)
+                    x0 = x + subsquare_size * i
+                    y0 = y + subsquare_size * j
+                    generate_carpet(x0, y0, subsquare_size, n - 1)
     else:
-        canvas.rectangle([x, y, x+size, y+size], fill=CARPET_COLOR)
+        canvas.rectangle([x, y, x + size, y + size], fill=CARPET_COLOR)
 
 
 if __name__ == "__main__":

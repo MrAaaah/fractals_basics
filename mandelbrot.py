@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
-import Image
-import ImageDraw
+from __future__ import print_function
+
+# noinspection PyPackageRequirements
+from PIL import Image, ImageDraw
 from datetime import datetime
 
 # size of the image
@@ -28,11 +30,11 @@ for j in xrange(0, HEIGHT):
 
         iteration = 0
 
-        while x**2 + y**2 < 4 and iteration < MAX_ITER:
-            xtemp = x**2 - y**2 + x0
-            y = 2*x*y + y0
+        while x ** 2 + y ** 2 < 4 and iteration < MAX_ITER:
+            x_temp = x ** 2 - y ** 2 + x0
+            y = 2 * x * y + y0
 
-            x = xtemp
+            x = x_temp
 
             iteration += 1
 
@@ -46,7 +48,7 @@ for j in xrange(0, HEIGHT):
 
     # display percentage of pixels already calculated
     if j % (HEIGHT / 100) == 0:
-        print '%d%%' % (j / (HEIGHT / 100))
+        print('%d%%' % (j / (HEIGHT / 100)))
 
 # save the fractal
 now = datetime.now()

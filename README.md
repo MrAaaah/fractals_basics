@@ -1,18 +1,27 @@
 # Fractals basics
 
-Some fractals in Python, no fancy coloring, no optimisations (multi-threading, etc.), just basic algorithms :
+Some [fractals](https://en.wikipedia.org/wiki/Fractal) in Python, no fancy coloring, no optimisations (multi-threading, etc.), just basic algorithms :
 
-- Sierpinsky triangle
+* [Sierpinsky triangle](https://en.wikipedia.org/wiki/Sierpinski_triangle)
+* [Sierpinsky carpet](https://en.wikipedia.org/wiki/Sierpinski_carpet)
+* [Mandelbrot](https://en.wikipedia.org/wiki/Mandelbrot_set)
 
-- Sierpinsky carpet
+## Requirements
 
-- Mandelbrot
+* **Python 2.7** (I didn't try with an other version)
+* [Pillow](https://python-pillow.org/) used to draw fractals in PNG's files.
 
-- 
+Install requirements:
+```
+pip install -r requirements.txt
+```
+## Example outputs
 
+### Mandelbrot
+![mandelbrot](sample/mandelbrot.png)
 
-# Requirements
+### Sierpinski Carpen
+![sierpinski_carpen](sample/sierpinski_carpen.png)
 
-- Python 2.7 (I didn't try with an other version)
-
-- PIL (used to draw fractals in PNG's files)
+### Sierpinski Triangle
+![sierpinski_triangle](sample/sierpinski_triangle.png)
