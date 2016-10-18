@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-import Image
-import ImageDraw
+# noinspection PyPackageRequirements
+from PIL import Image, ImageDraw
 from datetime import datetime
 
 # each vertices is represented by a tupple (x, y)
@@ -17,9 +17,9 @@ BACKGROUND_COLOR = '#020104'
 TRIANGLE_COLOR = '#A4B1F2'
 
 
-# return the cordinates of the middle of the segment [ab]
+# return the coordinates of the middle of the segment [ab]
 def middle_of_segment(a, b):
-    return ((a[0]+b[0])/2, (a[1]+b[1])/2)
+    return (a[0] + b[0]) / 2, (a[1] + b[1]) / 2
 
 
 # draw a triangle abc
@@ -38,9 +38,9 @@ def generate_triangle(a, b, c, n):
         p3 = middle_of_segment(b, c)
 
         # repeat the process for each subtriangle
-        generate_triangle(a, p1, p2, n-1)
-        generate_triangle(b, p1, p3, n-1)
-        generate_triangle(c, p2, p3, n-1)
+        generate_triangle(a, p1, p2, n - 1)
+        generate_triangle(b, p1, p3, n - 1)
+        generate_triangle(c, p2, p3, n - 1)
     else:
         draw_triangle(a, b, c, TRIANGLE_COLOR)
 
